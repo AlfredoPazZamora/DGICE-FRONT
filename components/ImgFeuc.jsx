@@ -1,8 +1,8 @@
 import React from 'react'
 import feuc from '../src/img/feuc.jpg'
 import consorcio from '../src/img/consorcio.jpg'
-
 import Image from 'next/image'
+
 const ImgFeuc = () => {
     return (
         <div >

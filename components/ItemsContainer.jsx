@@ -6,7 +6,7 @@ import ImgSEP from './ImgSEP'
 const ItemsContainer = () => {
     return (
         <div>
-            <div className="bg-blue text-black p-20 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-40 sm:px-8 px-5 py-10">
+            <div className="bg-blue  text-black p-20 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-40 sm:px-8 px-5 py-10">
                 <Item />
                 <ImgFeuc />
                 <ImgSEP />
