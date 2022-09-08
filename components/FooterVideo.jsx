@@ -19,7 +19,7 @@ const FooterVideo = () => {
 
          <div className="bg-blue h-1/2 w-full flex md:flex-row flex-col justify-aroun
    dd items-start p-1">
-            <div className="p-5 ">
+            <div className="p-5 w-1/3">
                <ul className=" text-gray-800 font-bold text-3xl pb-6">
                   <p><span className="black">Contáctanos</span></p>
                </ul>
@@ -108,17 +108,17 @@ const FooterVideo = () => {
 
             </div>
 
-            <div className="p-1 w-1/3 text-center">
+            <div className="p-1 w-1/3 text-center space-x-4 sans-serif" >
 
-               <p className="text-gray-800 font-bold text-2xl pb-4 text-center">REDES SOCIALES</p>
-               <a href="https://www.facebook.com/dgiceUdeC">
+                  <p className="text-gray-800 font-bold text-2xl pb-4 text-center">REDES SOCIALES</p>
+                  <a href="https://www.facebook.com/dgiceUdeC">
 
-                  <FontAwesomeIcon className="w-1/5" icon={faFacebook} size="xl" />
-               </a>
-               <a href="https://portal.ucol.mx/dgice/</div>">
+                     <FontAwesomeIcon className="w-1/5" icon={faFacebook} size="xl" />
+                  </a>
+                  <a href="https://portal.ucol.mx/dgice/</div>">
 
-                  <FontAwesomeIcon className="w-1/5 item-center" icon={faGlobe} size="xl" />
-               </a>
+                     <FontAwesomeIcon className="w-1/5 item-center" icon={faGlobe} size="xl" />
+                  </a>
             </div>
 
 
