@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Home: NextPage = () => {
   return (
-    <div className="h-screen mb-auto">
+    <div className="">
 
 
 
@@ -41,7 +41,60 @@ const Home: NextPage = () => {
       <h1>Hola mundo</h1>
       <h1>Hola mundo</h1>
       <h1>Hola mundo</h1>
-<FooterVideo/>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundoultimo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <h1>Hola mundo</h1>
+      <FooterVideo />
     </div>
   );
 };
