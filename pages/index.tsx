@@ -17,7 +17,7 @@ const Home: NextPage = () => {
                 La calidad de estudio la encuentras aqui
               </p>
               <p className="text-h5 md:text-h3 py-4 font-thin">
-                Con más 100 cursos impartidos de los mejores profesores de la
+                Con más de 100 cursos impartidos por los mejores profesores de la
                 Universidad de Colima.
               </p>
               <div className="text-white text-xl py-4 border border-rose-500">
