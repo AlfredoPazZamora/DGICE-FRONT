@@ -16,20 +16,29 @@ module.exports = {
       'blue': "#31D0C1",
       'green': "#8DE137",
       'black': "#000000",
-      'white': "#FEFEFE"
+      'white': "#FEFEFE",
+      'slate-100': "rgb(241 245 249);"
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],
     },
     fontSize: {
-      'h1': "5rem",
+      'h1': "3rem",
       'h2': "2.5rem",
-      'h3': "2rem",
-      'base': "1.6rem",
+      'h3': "1.75rem",
+      'h4': '1.5rem',
+      'h5': '1.25rem',
+      'base': "1rem",
       'small': "1.2rem",
       'sm': '0.875rem',
       'xs': '0.75rem',
       'xl': '1.25rem'
+    },
+    fontWeight: {
+      'bold': 700,
+      'semibold': 600,
+      'medium': 500,
+      'thin': 100
     },
     extend: {},
   },

@@ -52,14 +52,8 @@ export const ListCards = () => {
 	return (
         <>
             {/* List cards */}
-            <section className=' grid w-full gap-8 bg-white grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-items-center'>
+            <section className=' grid w-full gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-items-center'>
 
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
                 <Card />
                 <Card />
                 <Card />
