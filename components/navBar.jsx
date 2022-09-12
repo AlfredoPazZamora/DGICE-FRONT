@@ -9,7 +9,7 @@ export default function NavBar() {
         <>
             <nav className='w-screen flex flex-nowrap justify-between items-center bg-white py-4 px-screen drop-shadow-md font-inter'>
                 <div className='flex items-center h-24'>
-                    <div className='hidden lg:block'>
+                    <div className='px-8 hidden lg:block'>
                         <Link href='https://portal.ucol.mx/dgice/'>
                             <a>
                                 <Image
