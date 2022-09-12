@@ -28,11 +28,11 @@ export default function NavBar() {
                 </div>
                 <div className='flex flex-nowrap items-center h-24 mr-4'>
                     <div className='hidden md:block ml-4'>
-                        <FontAwesomeIcon className='absolute py-3 md:ml-44 lg:ml-72' icon={faMagnifyingGlass} />
-                        <input className='rounded-3xl border border-black focus-within:shadow-lg px-5 py-2.5 w-52 text-sm md:text-xs lg:w-80 w-full' bg type="text" id='search' name='search' placeholder='Search' />
+                        <FontAwesomeIcon className='absolute py-3 md:ml-32 lg:ml-64' icon={faMagnifyingGlass} />
+                        <input className='rounded-3xl border border-black focus-within:shadow-lg px-5 py-2.5 w-52 text-sm md:text-xs lg:w-72 w-full' bg type="text" id='search' name='search' placeholder='Search' />
                     </div>
                     <div className='text-white text-xs lg:text-sm border border-rose-500 mx-4'>
-                        <button className='border border-blue bg-blue focus-within:shadow-lg text-center hover:bg-blue transition duration-500 ease-in-out rounded-3xl px-12 md:px-8 py-2.5' type='button'>Log In</button>
+                        <button className='border border-blue bg-blue focus-within:shadow-lg text-center hover:bg-blue transition duration-500 ease-in-out rounded-3xl px-12 md:px-8 py-2.5' type='button'>Ingresar</button>
                     </div>
                 </div>
             </nav>
