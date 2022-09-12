@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function NavBar() {
     return (
         <>
-            <nav className='flex flex-nowrap justify-between items-center bg-white py-4 drop-shadow-md font-inter'>
-                <div className='flex items-center mx-4 h-24'>
+            <nav className='w-screen flex flex-nowrap justify-between items-center bg-white py-4 px-8 drop-shadow-md font-inter'>
+                <div className='flex items-center h-24'>
                     <div className='hidden lg:block'>
                         <Link href='https://portal.ucol.mx/dgice/'>
                             <a>
