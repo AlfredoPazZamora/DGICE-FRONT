@@ -11,7 +11,6 @@ const allCourses = () => {
 
             </Head>
 
-
             <main className=" w-full border flex justify-center">
 
                 <div className="w-full lg:w-10/12 lg:flex ">
