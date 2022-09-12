@@ -8,7 +8,8 @@ module.exports = {
     screens: {
       'sm': '375px',
       'md': '500px',
-      'lg': '1024px'
+      'lg': '1024px',
+      'xl': '1200px'
     },
 
     colors: {
@@ -26,6 +27,9 @@ module.exports = {
       'h3': "2rem",
       'base': "1.6rem",
       'small': "1.2rem",
+      'sm': '0.875rem',
+      'xs': '0.75rem',
+      'xl': '1.25rem'
     },
     extend: {},
   },
