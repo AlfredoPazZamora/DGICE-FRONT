@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import NavBar from "../components/NavBar";
-import { Card } from "../components/Card/Card"
-import { ListCards } from "../components/Card/ListCards"
+import { Card } from "../components/Card/Card";
+import { ListCards } from "../components/Card/ListCards";
 
 const Home: NextPage = () => {
   return (
@@ -41,12 +41,9 @@ const Home: NextPage = () => {
             <p>Cursos populares</p>
           </div>
 
-
           <div className="flex md:items-center px-12 py-8 font-semibold">
             <ListCards />
           </div>
-
-
         </section>
       </main>
     </>
