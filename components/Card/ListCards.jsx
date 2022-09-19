@@ -13,7 +13,7 @@ const values = [
     {
         id: 2,
         title: "Curso de HTML",
-        image: "https://picsum.photos/200/300",
+        image: "https://picsum.photos/200/200",
         teacher: "Victor Robles",
         rating: 4,
         duration: "3 horas",
@@ -21,7 +21,7 @@ const values = [
     {
         id: 3,
         title: "Curso de JS",
-        image: "https://picsum.photos/200/300",
+        image: "https://picsum.photos/200/400",
         teacher: "Victor Robles",
         rating: 4,
         duration: "4 horas",
@@ -29,7 +29,7 @@ const values = [
     {
         id: 4,
         title: "Curso de SASS",
-        image: "https://picsum.photos/200/300",
+        image: "https://picsum.photos/300/500",
         teacher: "Victor Robles",
         rating: 4,
         duration: "5 horas",
@@ -37,7 +37,7 @@ const values = [
     {
         id: 5,
         title: "Curso de React",
-        image: "https://picsum.photos/200/300",
+        image: "https://picsum.photos/300/700",
         teacher: "Victor Robles",
         rating: 4,
         duration: "6 horas",
@@ -45,24 +45,15 @@ const values = [
 ];
 export const ListCards = () => {
 
-
-
-
-
 	return (
         <>
             {/* List cards */}
-            <section className=' grid w-full gap-8 bg-white grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-items-center'>
+            <section className='grid w-full gap-8 bg-white grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-items-center'>
 
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {values.map((value) => (
+                    <Card key={value.id} props={value}/>
+                ))}
+                
             </section>
         </>
     );
