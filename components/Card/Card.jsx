@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Image from 'next/image'
 
 export const Card = ({props}) => {
 	return (
@@ -13,7 +14,14 @@ export const Card = ({props}) => {
                         <p className="mb-5 text-sm text-white/80 z-10 font-thin uppercase tracking-widest">Curso</p>
                         <div className="flex place-items-center mb-5">
                             <picture className="w-1/4">
-                                <img className="w-14 h-14 rounded-full" src={props.image} alt="Imagen del curso" />
+                                <Image 
+                                    src={props.image} 
+                                    alt={`Imagen del curso ${props.title}`} 
+                                    width={75}
+                                    height={75}
+                                    loading="lazy"
+                                    className="rounded-full"
+                                />
                             </picture>
                             <h3 className="ml-3 text-base w-3/4 text-black font-regular ">{props.title}</h3>
                         </div>
