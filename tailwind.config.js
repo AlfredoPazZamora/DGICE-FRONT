@@ -17,6 +17,7 @@ module.exports = {
       'green': "#8DE137",
       'black': "#000000",
       'white': "#FEFEFE",
+      'gray': "#8fa8a6",
       'slate-100': "rgb(241 245 249);"
     },
     fontFamily: {
@@ -39,6 +40,10 @@ module.exports = {
       'semibold': 600,
       'medium': 500,
       'thin': 100
+    },
+    borderWidth: {
+      '50': '50px',
+      '80': '80px'
     },
     extend: {},
   },
