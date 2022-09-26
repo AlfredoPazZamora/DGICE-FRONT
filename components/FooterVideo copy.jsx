@@ -113,7 +113,9 @@ const FooterVideo = () => {
 
             <div className="p-1 w-1/3 text-center space-x-4 sans-serif" >
 
-               <p className="text-gray-800 font-bold text-2xl pb-4 text-center">REDES SOCIALES</p>
+               <p className="text-gray-800 font-bold text-2xl pb-4 text-center">
+                  REDES SOCIALES
+               </p>
                <a href="https://www.facebook.com/dgiceUdeC">
 
                   <FontAwesomeIcon className="w-1/5" icon={faFacebook} size="xl" />
