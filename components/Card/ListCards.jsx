@@ -1,6 +1,15 @@
 import { useState } from 'react';
 import { Card } from './Card';
 
+/*
+    id
+    title
+    imagen
+    autor
+    horas de acreditación
+    modulos
+*/
+
 const values = [
     {
         id: 1,
@@ -15,7 +24,7 @@ const values = [
         title: "Curso de HTML",
         image: "https://picsum.photos/200/200",
         teacher: "Victor Robles",
-        rating: 4,
+        rating: 5,
         duration: "3 horas",
     },
     {
@@ -23,7 +32,7 @@ const values = [
         title: "Curso de JS",
         image: "https://picsum.photos/200/400",
         teacher: "Victor Robles",
-        rating: 4,
+        rating: 2,
         duration: "4 horas",
     },
     {
@@ -31,7 +40,7 @@ const values = [
         title: "Curso de SASS",
         image: "https://picsum.photos/300/500",
         teacher: "Victor Robles",
-        rating: 4,
+        rating: 5,
         duration: "5 horas",
     },
     {
@@ -39,7 +48,23 @@ const values = [
         title: "Curso de React",
         image: "https://picsum.photos/300/700",
         teacher: "Victor Robles",
-        rating: 4,
+        rating: 6,
+        duration: "6 horas",
+    },
+    {
+        id: 6,
+        title: "Curso de SASS",
+        image: "https://picsum.photos/300/500",
+        teacher: "Victor Robles",
+        rating: 5,
+        duration: "5 horas",
+    },
+    {
+        id: 7,
+        title: "Curso de React",
+        image: "https://picsum.photos/300/700",
+        teacher: "Victor Robles",
+        rating: 1,
         duration: "6 horas",
     }
 ];
