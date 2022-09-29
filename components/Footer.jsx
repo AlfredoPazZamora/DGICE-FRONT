@@ -14,16 +14,16 @@ const FooterVideo = () => {
    return (
       <>
          {/* div padre de todo */}
-         <div className="sticky grid grid-cols-1 lg:grid-cols-4 bg-blue">
+         <div className=" sticky grid grid-cols-1 lg:grid-cols-4 bg-blue ">
 
             {/* grid col 1 with icons and text */}
-            <div className="bg-blue  justify-center ml-20 md:justify-center">
-               <p className="font-bold text-xl pb-2 ">
+            <div className="bg-blue  justify-center ml-20 md:justify-center md:pt-3 lg:ml-0 ">
+               <p className="font-bold text-xl pb-2 md:ml-10 lg:ml-0">
                   <span className="black text-center ml-10 ">Contáctanos</span>
                </p>
 
-               <ul className=" ">
-                  <div className=" flex flex-row space-x-2 ">
+               <ul className=" md:ml-10 lg:ml-0">
+                  <div className=" flex flex-row space-x-1 ml-3 md:ml-4 ">
                      <FontAwesomeIcon icon={faBook} />
                      <Link href="https://sistemas.ucol.mx/telefonia/">
                         <p className=' no-underline hover:underline text-white-500 text-lg'>
@@ -32,7 +32,7 @@ const FooterVideo = () => {
                      </Link>
 
                   </div>
-                  <div className=" flex flex-row space-x-2 ">
+                  <div className=" flex flex-row space-x-1 ml-3 md:ml-4 ">
                      <FontAwesomeIcon icon={faGraduationCap} />
                      <Link href="https://www.ucol.mx/conocenos/planteles-dependencias.htm">
                         <p className='no-underline  hover:underline text-white-500 text-lg'>
@@ -41,7 +41,7 @@ const FooterVideo = () => {
                      </Link>
 
                   </div>
-                  <div className=" flex flex-row space-x-2 ">
+                  <div className=" flex flex-row space-x-1 ml-3 md:ml-4 ">
                      <FontAwesomeIcon icon={faPhone} />
                      <Link href="https://portal.ucol.mx/dgice/contacto.htm">
                         <p className='no-underline  hover:underline text-white-500 text-lg'>
@@ -50,7 +50,7 @@ const FooterVideo = () => {
                      </Link>
 
                   </div>
-                  <div className=" flex flex-row space-x-2 ">
+                  <div className=" flex flex-row space-x-1 ml-3 md:ml-4 ">
 
                      <FontAwesomeIcon icon={faLocationDot} />
                      <Link href="https://portal.ucol.mx/dgice/mapa.htm">
@@ -125,29 +125,48 @@ const FooterVideo = () => {
             </div>
             {/* fin de grid de imagenes 3 y 4 */}
 
-            {/* grid de redes sociales */}
-            <div className="mx-10">
-               <p className="text-gray-800 font-bold text-2xl pb-4 text-center">
-                  REDES SOCIALES
-               </p>
-               <div className="mx-10 md:grid grid-cols-2">
 
-                  <Link href="https://www.facebook.com/dgiceUdeC">
-                     <a >
-                        <FontAwesomeIcon className="w-1/2 md:ml-10" icon={faFacebook} size="xl" />
-                     </a>
-                  </Link>
-                  <Link href="https://portal.ucol.mx/dgice/</div>">
-                     <a >
-                        <FontAwesomeIcon className="w-1/2 md:ml-2" icon={faGlobe} size="xl" />
-                     </a>
-                  </Link>
+
+
+
+            {/* grid de redes sociales */}
+            <div className="mx-10 lg:mx-0 ">
+
+               <div className="ml-10 md:ml-12 lg:ml-12 ">
+                  <p className="text-gray-800 font-bold text-xl  pb-4 md:ml-12 lg:ml-5 ml-6 md:pt-2 md:mx-8">
+                     <span >Redes Sociales</span>
+                  </p>
+               </div>
+
+               <div className="mx-10  grid grid-cols-2 ">
+
+                  <div className="ml-10 md:ml-12 ">
+                     <Link href="https://www.facebook.com/dgiceUdeC">
+                        <a className=" ">
+                           <FontAwesomeIcon className="" icon={faFacebook} size="xl" />
+                        </a>
+                     </Link>
+                  </div>
+
+                  <div className="md:ml-7" >
+                     <Link href="https://portal.ucol.mx/dgice/</div>">
+                        <a className=" ">
+                           <FontAwesomeIcon className=" " icon={faGlobe} size="xl" />
+                        </a>
+                     </Link>
+                  </div>
+
                </div>
             </div>
             {/* fin de grid de redes sociales */}
          </div >
+
+
+
          <div className="text-center ">
-            <h1 className="text-center bg-blue text-black p-6">© Derechos Reservados Universidad de Colima</h1>
+            <h1 className="text-center bg-blue text-black p-6">
+               © Derechos Reservados Universidad de Colima
+            </h1>
          </div>
       </>
    )
