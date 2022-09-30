@@ -67,7 +67,7 @@ const FooterVideo = () => {
             {/* aqui termina la primera grid */}
 
             {/* empieza grid de imagenes 1 y 2*/}
-            <div className="py-6 md:mx-10 md:py-3">
+            <div className="py-6 md:mx-10 md:py-3 lg:w-full lg:mx-5">
                <div className=" mx-10" >
                   <Link href="https://portal.ucol.mx/feuc/">
                      <a>
@@ -80,7 +80,7 @@ const FooterVideo = () => {
                   </Link>
                </div>
 
-               <div className=" ml-20 pt-1 " >
+               <div className=" ml-20 pt-1 lg:w-30" >
                   <Link href="https://www.cumex.org.mx/">
                      <a>
                         <Image
@@ -97,7 +97,7 @@ const FooterVideo = () => {
             {/* grid de imagenes 3 y 4 */}
             <div className="md:mx-10 ">
 
-               <div className=" ml-20 pt-1" >
+               <div className=" ml-20 pt-1 lg:w-full" >
                   <Link href="https://www.gob.mx/sep">
                      <a>
                         <Image
@@ -110,7 +110,7 @@ const FooterVideo = () => {
 
                </div>
 
-               <div className=" ml-20 pt-1" >
+               <div className=" ml-20 pt-1 lg:w-full" >
                   <Link href="http://federaciondeestudiantescolimenses.com/">
                      <a>
                         <Image
