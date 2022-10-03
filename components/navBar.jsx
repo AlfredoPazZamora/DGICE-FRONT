@@ -7,20 +7,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const NavBar = () => {
     return (
         <>
-            <nav className='w-screen flex flex-nowrap justify-between items-center bg-white py-4 drop-shadow-md font-inter'>
+            <nav className='w-screen flex flex-nowrap justify-between items-center bg-white py-4 font-inter shadow-md'>
                 <div className='flex items-center h-24'>
                     <div className='px-8 hidden lg:block'>
                         <Link href='https://portal.ucol.mx/dgice/'>
                             <a>
                                 <Image
-                                    src="/img/logo.png"
-                                    width={200}
-                                    height={80}
+                                    src="/img/circle.png"
+                                    width={110}
+                                    height={110}
                                 />
                             </a>
                         </Link>
                     </div>
-                    <div className='mx-8 text-xl'>
+                    <div className='text-xl mx-8'>
                         <Link href='/'>
                             <a>Cursos</a>
                         </Link>
@@ -31,8 +31,8 @@ export const NavBar = () => {
                         <FontAwesomeIcon className='absolute py-3 md:ml-40 lg:ml-64' icon={faMagnifyingGlass} />
                         <input className='rounded-3xl border border-black focus-within:shadow-lg px-5 py-2.5 text-sm md:text-xs lg:w-72'  type="text" id='search' name='search' placeholder='Search' />
                     </div>
-                    <div className='text-white text-xs lg:text-sm mx-4'>
-                        <button className='border border-blue bg-blue focus-within:shadow-lg text-center hover:bg-blue transition duration-500 ease-in-out rounded-3xl px-12 md:px-8 py-2.5' type='button'>Ingresar</button>
+                    <div className='text-xs lg:text-sm mx-4'>
+                        <button className='border border-blue bg-blue focus-within:shadow-lg text-center hover:bg-blue_light transition duration-500 ease-in-out rounded-3xl px-8 md:px-12 py-2.5' type='button'>Ingresar</button>
                     </div>
                 </div>
             </nav>
