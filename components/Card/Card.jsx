@@ -29,7 +29,7 @@ export const Card = ({props}) => {
                             </picture>
                             <h3 className="ml-3 text-small w-3/4 text-black font-bold ">{title}</h3>
                         </div>
-                        <div className="mb-5 flex place-items-center">
+                        <div className="mb-5 flex place-items-center text-white/80 ">
                             <StartRating rating={rating}/>
                         </div>
 
