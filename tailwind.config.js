@@ -10,7 +10,6 @@ module.exports = {
       'md': '500px',
       'lg': '1024px'
     },
-
     colors: {
       'blue_green': "#22928e",
       'blue_light': "#31D0C1",
