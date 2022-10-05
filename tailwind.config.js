@@ -12,29 +12,11 @@ module.exports = {
     },
 
     colors: {
-      // Paleta del logo
-      // 'green': "#30b52f",
-      'blue': "#208ea4",
-      'blue_light': "#1fbbc8",
-      // 'yellow': "#e8bc8b",
-      // 'purple': "#74428d",
-
-      //Con amarillo
-      // 'yellow': "#ffd803", **
-      // 'yellow_light': "#ffe866", **
-      // 'purple': "#5702b3",
-      // 'purple_light':"#7d03ff"
-
-      //Verdes
-      // 'blue_light': "#31D0C1",
-      // 'blue': "#22928e",
-      // 'green': "#249222", **
-      // 'green_light': "#33d031", **
-
-      //Rosas
-      // 'pink': "#d925d9",
-      // 'pink_light': "#e566e5a"
-
+      'blue_green': "#22928e",
+      'blue_light': "#31D0C1",
+      'blue': "#315cd0",
+      'yellow': "#ffd803",
+      'green': "#249222"
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],
