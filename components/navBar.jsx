@@ -29,10 +29,10 @@ export const NavBar = () => {
                 <div className='flex flex-nowrap items-center h-24 mr-4'>
                     <div className='hidden md:block ml-4'>
                         <FontAwesomeIcon className='absolute py-3 md:ml-40 lg:ml-64' icon={faMagnifyingGlass} />
-                        <input className='rounded-3xl border border-black focus-within:shadow-lg px-5 py-2.5 text-sm md:text-xs lg:w-72'  type="text" id='search' name='search' placeholder='Search' />
+                        <input className='rounded-3xl border border-black focus-within:shadow-lg px-5 py-2.5 text-sm md:text-xs lg:w-72 shadow-md'  type="text" id='search' name='search' placeholder='Search' />
                     </div>
                     <div className='text-xs lg:text-sm mx-4'>
-                        <button className='border border-blue bg-blue focus-within:shadow-lg text-center hover:bg-blue_light transition duration-500 ease-in-out rounded-3xl px-8 md:px-12 py-2.5' type='button'>Ingresar</button>
+                        <button className='border border-blue_green bg-blue_green focus-within:shadow-lg text-center hover:bg-blue_light transition duration-500 ease-in-out rounded-3xl px-8 md:px-12 py-2.5 shadow-md' type='button'>Ingresar</button>
                     </div>
                 </div>
             </nav>
