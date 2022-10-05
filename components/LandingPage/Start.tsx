@@ -14,7 +14,7 @@ export const Start = () => {
                     Con más de 100 cursos impartidos por los mejores profesores de la
                     Universidad de Colima.
                 </p>
-                <div className="text-white text-xl py-4 border border-rose-500">
+                <div className="text-white text-xl py-4">
                     <button
                     className="border border-blue bg-blue focus-within:shadow-lg text-center hover:bg-blue transition duration-500 ease-in-out rounded-2xl px-12 md:px-8 py-2.5"
                     type="button"
