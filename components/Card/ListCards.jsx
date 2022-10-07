@@ -70,13 +70,10 @@ const values = [
 ];
 export const ListCards = ({courses}) => {
 
-    console.log(courses);
-    
-
 	return (
         <>
             {/* List cards */}
-            <section className='gap-8 bg-white flex flex-wrap '>
+            <section className='gap-4 w-full bg-white grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4'>
 
                 {
                     courses.map((course) => (
