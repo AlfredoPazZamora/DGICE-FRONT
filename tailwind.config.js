@@ -13,10 +13,13 @@ module.exports = {
     },
 
     colors: {
-      'blue': "#31D0C1",
-      'green': "#8DE137",
-      'black': "#000000",
-      'white': "#FEFEFE"
+      'blue_green': "#22928e",
+      'blue_light': "#31D0C1",
+      'blue': "#315cd0",
+      'yellow': "#ffd803",
+      'green': "#249222",
+      'white': '#fff',
+      'black': '#000',
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],
