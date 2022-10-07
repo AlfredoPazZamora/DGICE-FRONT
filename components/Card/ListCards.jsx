@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card } from './Card';
 
 /*
@@ -68,16 +68,18 @@ const values = [
         duration: "6 horas",
     }
 ];
-export const ListCards = () => {
+export const ListCards = ({courses}) => {
 
 	return (
         <>
             {/* List cards */}
-            <section className='grid w-full gap-8 bg-white grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-items-center'>
+            <section className='gap-4 w-full bg-white grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4'>
 
-                {values.map((value) => (
-                    <Card key={value.id} props={value}/>
-                ))}
+                {
+                    courses.map((course) => (
+                        <Card key={course.id} course={course}/>
+                    ))
+                }
                 
             </section>
         </>
