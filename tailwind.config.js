@@ -24,16 +24,7 @@ module.exports = {
     fontFamily: {
       inter: ["Inter", "sans-serif"],
     },
-    fontSize: {
-      'h1': "5rem",
-      'h2': "2.5rem",
-      'h3': "2rem",
-      'base': "1.6rem",
-      'small': "1.2rem",
-      'sm': '0.875rem',
-      'xs': '0.75rem',
-      'xl': '1.25rem'
-    },
+    
     extend: {},
   },
   plugins: [],
