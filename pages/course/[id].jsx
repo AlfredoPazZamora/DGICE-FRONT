@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import React from "react";
 import { MainLayout } from "../../components/Layouts/MainLayout";
 
@@ -8,7 +7,8 @@ import { StartRating } from "../../components/Global";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faBuildingColumns, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import {faClock} from "@fortawesome/free-regular-svg-icons";
 
 const pageCourse = ({course}) => {
 
@@ -20,44 +20,42 @@ const pageCourse = ({course}) => {
 			<div className="w-full flex justify-center items-center flex-col">
 
 				<div className="w-full bg-blue_light/30 flex justify-center items-center">
-					<div className="w-9/12 grid grid-cols-3 gap-10">
-						<section className="col-span-2 flex flex-col justify-center my-10">
-							<h1 className="text-h2 font-bold mb-5">{name_course}</h1>
-							<p className="text-small"> {description}</p>
+					<div className="w-full grid-cols-1 lg:w-9/12 grid  lg:grid-cols-3 gap-10 grid-flow-row">
 
-							<div className="my-5  flex gap-5">
-								<span className="bg-blue text-white font-bold py-2 px-4 rounded-full text-sm tracking-wide">Programación</span>
-								<StartRating rating={4.5}/>
-							</div>
+						{/* <div className="h-60 col-start-3 row-start-1 bg-white"></div>
+						<div className="h-60  bg-blue col-start-1 row-start-1 col-span-2"></div> */}
 
-							<div className="flex gap-5">
-								<p className="text-small mb-2">Duración: <strong>{duration} horas</strong></p>
-								<p className="text-small mb-2">Acreditación: <strong>{credits} horas</strong></p>
-							</div>
-
-							
-							<div className="mt-5">
-								<p className="text-small">Creado por <strong>{author}</strong></p>
-							</div>
-						</section>
-						
-						<aside className="col-span-1 relative">
+						<aside className="lg:col-start-3 lg:row-start-1 my-10 flex flex-col justify-center ">
 							<Image 
 								src={img}
 								alt="Picture of the author"
 								layout="responsive"
 								width='100%'
-								height='100%'
+								height={80}
+								className="rounded-lg flex-grow"
 							/>
-
-							<div className="backdrop-opacity-10 absolute top-0 w-full h-full bg-gradient-to-l from-blue_light/50 via-white/10 to-blue_light/30 rounded-b-lg">
-
+							<div className="pt-5">
+								<p className=" bg-blue text-white text-center py-4 px-2 rounded-lg text-small tracking-wide cursor-pointer hover:bg-blue/80 hover:text-white">Empezar curso</p>
 							</div>
 
-							{/* <div className="rounded-b-lg text-black absolute bottom-5 w-full px-5">
-								<p className="bg-blue text-white text-center py-4 px-2 rounded-lg text-small tracking-wide cursor-pointer hover:bg-blue/80 hover:text-white">Empezar curso</p>
-							</div> */}
+							
+
+								
 						</aside>
+						<section className="grid-cols-1 lg:col-start-1 lg:row-start-1 mx-10 lg:mx-0 lg:col-span-2 flex flex-col justify-center my-10">
+							<h1 className="text-4xl font-bold">{name_course}</h1>
+							<p className="text-small mb-5">Creado por <strong>{author}</strong></p>
+							<p className="text-small text-justify lg:text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget felis purus. Cras ac malesuada dui. Etiam nunc lectus, fermentum mattis ante et, tempus malesuada ligula. Nulla tincidunt lorem nec magna malesuada pharetra. In lectus erat, congue non metus vitae, maximus tempus turpis. Nunc semper lobortis hendrerit. Cras dictum mi eget aliquam elementum. Suspendisse faucibus vel dolor efficitur fringilla. Donec non mi non augue viverra volutpat. Aenean vel elementum nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.	</p>
+
+							<div className="my-5  flex gap-5 items-center ">
+								<span className="bg-blue text-white font-bold py-2 px-4 rounded-full text-sm tracking-wide">{area}</span>
+								<StartRating rating={4.5}/>
+								<p className="text-small"><FontAwesomeIcon icon={faClock} /> <strong>{duration} horas</strong></p>
+								<p className="text-small "><FontAwesomeIcon icon={faBuildingColumns} /> <strong>{credits} horas</strong></p>
+							</div>							
+						</section>
+						
+						
 					</div>
 				</div>
 

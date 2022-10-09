@@ -3,8 +3,15 @@ import { faArrowRight, faBuildingColumns } from "@fortawesome/free-solid-svg-ico
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import Image from 'next/image'
 import { StartRating } from "../Global";
+import { useRouter } from "next/router";
 
 export const Card = ({course: {id, name_course, author, credits, rating, area, duration, description, img}}) => {
+
+    const router = useRouter();
+    const onClick = () => {
+        router.push(`/course/${id}`);
+    }
+
 
 	return (
         <>
@@ -35,7 +42,7 @@ export const Card = ({course: {id, name_course, author, credits, rating, area, d
 
                     <div>
                         <p className="text-md mb-4">Por {author}</p>
-                        <a className="border border-blue text-blue w-full  py-3 rounded-md font-bold flex justify-center content-center hover:bg-blue hover:text-white cursor-pointer">
+                        <a className="border border-blue text-blue w-full  py-3 rounded-md font-bold flex justify-center content-center hover:bg-blue hover:text-white cursor-pointer" onClick={onClick}>
                             <span>Empezar ahora</span>
                         </a>
                     </div>
