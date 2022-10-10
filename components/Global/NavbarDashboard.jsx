@@ -9,14 +9,17 @@ const navItems = [
     {
         item: 'Inicio',
         icon: faHouse,
+        url: '/instructor'
     },
     {
         item: 'Cursos',
         icon: faBriefcase,
+        url: '/instructor/cursos'
     },
     {
         item: 'Mensajes',
         icon: faMessage,
+        url: '/instructor/mensajes'
     },
 ]
 
@@ -41,11 +44,13 @@ export const NavbarDashboard = ({username, image}) => {
                 <section className='w-full'>
 
                     {
-                        navItems.map(({item, icon}) => (
-                            <div className='cursor-pointer flex justify-center items-center py-2 mb-5 hover:bg-blue hover:text-white md:justify-start lg:px-5 lg:py-5 lg:mb-0 '> 
-                                <FontAwesomeIcon icon={icon} className='text-2xl md:text-xl' />
-                                <p className='hidden text-md ml-2 md:flex '>{item}</p>
-                            </div>
+                        navItems.map(({item, icon, url}) => (
+                            <Link href={url} key={item}> 
+                                <a className='cursor-pointer flex justify-center items-center py-2 mb-5 md:px-2 hover:bg-blue hover:text-white md:justify-start lg:px-5 lg:py-5 lg:mb-0 '> 
+                                    <FontAwesomeIcon icon={icon} className='text-2xl md:text-xl' />
+                                    <p className='hidden text-md ml-2 md:flex '>{item}</p>
+                                </a>
+                            </Link>
                         ))
                     }
     

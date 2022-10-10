@@ -10,9 +10,9 @@ export const DashboardLayout = ({children, title, user:{fullName, email, profile
                 <title>{title || "DGICE Academy"}</title>
             </Head>
 
-            <div className='flex'>
+            <div className='flex box-border '>
                 <NavbarDashboard username={fullName} image={profileImg}/>
-                <main className='lg:p-10'>
+                <main className='p-5 lg:p-10 w-full '>
                     {children}
                 </main>
             </div>
