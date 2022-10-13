@@ -8,8 +8,7 @@ import LogoSep from '../src/img/LogoSep.jpg'
 import LogoFec from '../src/img/LogoFEC.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faPhone, faGraduationCap, faBook, faMapLocation, faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-
+import { faFacebook, faSquareFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const FooterVideo = () => {
    return (
@@ -144,7 +143,7 @@ const FooterVideo = () => {
                   <div className=" mr-2 md:mr-0 ">
                      <Link href="https://www.facebook.com/dgiceUdeC">
                         <a >
-                           <FontAwesomeIcon icon={faFacebook} size="xl" />
+                           <FontAwesomeIcon icon={faSquareFacebook} size="2xl" />
                         </a>
                      </Link>
                   </div>
@@ -152,7 +151,7 @@ const FooterVideo = () => {
                   <div className="md:ml-7 " >
                      <Link href="https://portal.ucol.mx/dgice/</div>">
                         <a >
-                           <FontAwesomeIcon icon={faGlobe} size="xl" />
+                           <FontAwesomeIcon icon={faGlobe} size="2xl" />
                         </a>
                      </Link>
                   </div>
