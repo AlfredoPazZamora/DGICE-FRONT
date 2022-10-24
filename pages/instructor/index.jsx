@@ -1,15 +1,14 @@
 import React from 'react'
+import { CreateCourse } from '../../components/Dashboard'
 import { DashboardLayout } from '../../components/Layouts'
 
 
 const index = ({user}) => {
 
-    console.log(user)
-
     return (
-        <DashboardLayout title='Panel colaborador' user={user}>
+        <DashboardLayout title='Panel colaborador' user={user} type={'profesor'}>
 
-            <h1>Panel colaborador</h1>
+            <CreateCourse />
 
         </DashboardLayout>
     )

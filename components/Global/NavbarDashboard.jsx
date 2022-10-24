@@ -9,25 +9,28 @@ const navItems = [
     {
         item: 'Inicio',
         icon: faHouse,
+        url: '/instructor'
     },
     {
         item: 'Cursos',
         icon: faBriefcase,
+        url: '/instructor/cursos'
     },
     {
         item: 'Mensajes',
         icon: faMessage,
+        url: '/instructor/mensajes'
     },
 ]
 
 export const NavbarDashboard = ({username, image}) => {
     return (
-        <nav className='bg-white w-1/5 max-w-[200px] shadow-xl min-h-screen flex flex-col justify-between'>
+        <nav className='bg-blue_green w-1/5 max-w-[200px] shadow-xl min-h-screen flex flex-col justify-between'>
 
 
-            <div className=''>
+            <div className='text-white'>
                 <picture className='mx-2 my-5 flex justify-center'>
-                    <Image src='/img/logo.png' width='100%' height='100%' />
+                    <Image src='/img/logo-blanco.png' width='100%' height='100%' />
                 </picture>
                 
 
@@ -41,11 +44,13 @@ export const NavbarDashboard = ({username, image}) => {
                 <section className='w-full'>
 
                     {
-                        navItems.map(({item, icon}) => (
-                            <div className='cursor-pointer flex justify-center items-center py-2 mb-5 hover:bg-blue hover:text-white md:justify-start lg:px-5 lg:py-5 lg:mb-0 '> 
-                                <FontAwesomeIcon icon={icon} className='text-2xl md:text-xl' />
-                                <p className='hidden text-md ml-2 md:flex '>{item}</p>
-                            </div>
+                        navItems.map(({item, icon, url}) => (
+                            <Link href={url} key={item}> 
+                                <a className='cursor-pointer flex justify-center items-center py-2 mb-5 md:px-2 hover:bg-blue hover:text-white md:justify-start lg:px-5 lg:py-5 lg:mb-0 '> 
+                                    <FontAwesomeIcon icon={icon} className='text-2xl md:text-xl' />
+                                    <p className='hidden text-md ml-2 md:flex '>{item}</p>
+                                </a>
+                            </Link>
                         ))
                     }
     
