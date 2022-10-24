@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ListCards } from "../Card/ListCards";
+import { Card } from '../Card/Card';
 
-export const Courses = () => {
+const Courses = () => {
+
   return (
     <>
       <section className="bg-slate-100 w-screen lg:px-9 py-6">
@@ -16,3 +18,5 @@ export const Courses = () => {
     </>
   )
 }
+
+export { Courses }

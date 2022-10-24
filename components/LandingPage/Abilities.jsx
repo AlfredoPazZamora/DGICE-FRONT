@@ -2,13 +2,14 @@ import React from 'react'
 import { faEye } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const Abilities = ( {number} ) => {
+export const Abilities = ( {icon, valor} ) => {
   return (
     <>
-        <div className='px-12 md:px-24 flex flex-col justify-center items-center'>
-            <FontAwesomeIcon className='py-4' icon={faEye} /> 
-            <p className='text-center py-2 text-h5'>Habilidad {number}</p>
-            <p className='w-full text-justify pb-12  text-xs md:text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium neque sequi eos reprehenderit tempora totam vero dolore exercitationem? Eum, dicta! Officia libero quasi voluptatem obcaecati harum non error. Tenetur, eaque!</p>
+        <div className='flex lg:flex-col justify-center items-center'>
+            <FontAwesomeIcon className='py-4 px-5 fa-2xl' icon={icon} />
+            <div className='w-48 bg-blue_green rounded-2xl px-4 text-white shadow-md'>
+              <p className='text-center text-sm md:text-small py-2 text-h5'>{valor}</p>
+            </div> 
         </div>
     </>
   )

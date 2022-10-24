@@ -11,10 +11,12 @@ module.exports = {
       'lg': '1024px'
     },
     colors: {
+      'white': "#ffffff",
       'blue_green': "#22928e",
       'blue_light': "#31D0C1",
       'blue': "#315cd0",
       'yellow': "#ffd803",
+      'yellow_light':"#dcbd12",
       'green': "#249222"
     },
     fontFamily: {
