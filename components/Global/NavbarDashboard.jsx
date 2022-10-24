@@ -25,12 +25,12 @@ const navItems = [
 
 export const NavbarDashboard = ({username, image}) => {
     return (
-        <nav className='bg-white w-1/5 max-w-[200px] shadow-xl min-h-screen flex flex-col justify-between'>
+        <nav className='bg-blue_green w-1/5 max-w-[200px] shadow-xl min-h-screen flex flex-col justify-between'>
 
 
-            <div className=''>
+            <div className='text-white'>
                 <picture className='mx-2 my-5 flex justify-center'>
-                    <Image src='/img/logo.png' width='100%' height='100%' />
+                    <Image src='/img/logo-blanco.png' width='100%' height='100%' />
                 </picture>
                 
 
