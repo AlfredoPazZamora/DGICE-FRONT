@@ -1,12 +1,14 @@
-import Head from "next/head";
-import React from "react";
+import { useQuery } from "@apollo/client";
 import { ListCards } from "../../components/Card";
 import { MainLayout } from "../../components/Layouts/MainLayout";
+import { GET_COURSES } from "../../src/gpl/queryCourse";
 
-import fsPromise from "fs/promises";
-import path from "path";
+const allCourses = () => {
 
-const allCourses = ({courses}) => {
+    const { loading, error, data } = useQuery(GET_COURSES);
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error :c </p>;
+
 	return (
         <>
             <MainLayout>
@@ -17,7 +19,7 @@ const allCourses = ({courses}) => {
                     </aside>
 
                     <section className="w-full bg-white flex justify-center">
-                        <ListCards courses={courses}/>
+                        <ListCards courses={data.getAllCourses}/> 
                     </section>
                 </div>
 
@@ -29,21 +31,5 @@ const allCourses = ({courses}) => {
     );
 };
 
-export const getStaticProps = async (ctx) => {
-    const filePath = path.join(process.cwd(), "data.json");
-    const jsonData = await fsPromise.readFile(filePath);
-    const data = JSON.parse(jsonData);
-
-    const courses = data.map((course, index) => ({
-        ...course,
-        img: `https://picsum.photos/id/${index + 1}/200/300`,
-    }))
-    
-    return {
-        props: {
-            courses
-        },
-    };
-}
 
 export default allCourses;
