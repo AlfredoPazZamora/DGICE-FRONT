@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';   
 
 export const NavBar = () => {
     return (
