@@ -1,5 +1,7 @@
+
 import type { NextPage } from 'next'
 import { NavBar } from '../components/NavBar'
+
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // Example to add an icon in your component
@@ -8,10 +10,9 @@ import { NavBar } from '../components/NavBar'
 
 const Home: NextPage = () => {
   return (
-    <>
-      <NavBar />
-    </>
+
+    <NavBar></NavBar>
   )
 }
 
-export default Home
+export default Home;

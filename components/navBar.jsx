@@ -7,10 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const NavBar = () => {
     return (
         <>
-            <nav className='w-screen flex flex-nowrap justify-between items-center bg-white py-4 font-inter shadow-md'>
-                <div className='flex items-center h-24'>
-                    <div className='px-8 hidden lg:block'>
-                        <Link href='https://portal.ucol.mx/dgice/'>
+            <nav className='flex flex-nowrap justify-between items-center bg-white py-4 drop-shadow-md font-inter'>
+                <div className='flex items-center mx-4 h-24'>
+                    <div className='hidden lg:block'>
+                        <Link href='/'>
                             <a>
                                 <Image
                                     src="/img/circle.png"
@@ -20,8 +20,8 @@ export const NavBar = () => {
                             </a>
                         </Link>
                     </div>
-                    <div className='text-xl mx-8 transform hover:underline'>
-                        <Link href='/'>
+                    <div className='mx-8 text-xl'>
+                        <Link href='/courses'>
                             <a>Cursos</a>
                         </Link>
                     </div>
