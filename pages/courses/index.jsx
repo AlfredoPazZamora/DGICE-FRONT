@@ -1,32 +1,35 @@
-import Head from "next/head";
-import React from "react";
-import { Card } from "../../components/Card/Card";
-import { ListCards } from '../../components/Card/ListCards'
+import { useQuery } from "@apollo/client";
+import { ListCards } from "../../components/Card";
+import { MainLayout } from "../../components/Layouts/MainLayout";
+import { GET_COURSES } from "../../src/gpl/queryCourse";
 
 const allCourses = () => {
+
+    const { loading, error, data } = useQuery(GET_COURSES);
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error :c </p>;
+
 	return (
         <>
-            <Head>
-                <title>Courses</title>
+            <MainLayout>
 
-            </Head>
-
-            <main className=" w-full border flex justify-center">
-
-                <div className="w-full lg:w-10/12 lg:flex ">
-                    <aside className=" bg-white border rounded-xl h-fit mt-5 lg:sticky lg:top-5 hidden lg:flex lg:w-2/12 lg:justify-center lg:p-5">
+                <div className=" mx-5 my-10 lg:m-10 w-full lg:flex  bg-white">
+                    <aside className=" bg-white border rounded-xl hidden h-fit lg:sticky lg:top-5 lg:flex lg:w-72 lg:mr-5 lg:justify-center lg:p-5">
                         <p>Lateral</p>
                     </aside>
 
-                    <section className="w-full p-5 lg:w-10/12 bg-white flex justify-center">
-                        <ListCards />
+                    <section className="w-full bg-white flex justify-center">
+                        <ListCards courses={data.getAllCourses}/> 
                     </section>
                 </div>
 
-            </main>
+            </MainLayout>
+
+            
 
         </>
     );
 };
+
 
 export default allCourses;
