@@ -10,7 +10,7 @@ export const NavBar = () => {
             <nav className='flex flex-nowrap justify-between items-center bg-white py-4 drop-shadow-md font-inter'>
                 <div className='flex items-center mx-4 h-24'>
                     <div className='hidden lg:block'>
-                        <Link href='/'>
+                        <Link href='https://portal.ucol.mx/dgice/'>
                             <a>
                                 <Image
                                     src="/img/circle.png"
@@ -20,7 +20,7 @@ export const NavBar = () => {
                             </a>
                         </Link>
                     </div>
-                    <div className='mx-8 text-xl'>
+                    <div className='mx-8 text-xl hover:underline'>
                         <Link href='/courses'>
                             <a>Cursos</a>
                         </Link>
