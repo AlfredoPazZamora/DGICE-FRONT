@@ -1,6 +1,6 @@
 
 import type { NextPage } from 'next'
-import NavBar from '../components/navBar'
+import { NavBar } from '../components/NavBar'
 
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
