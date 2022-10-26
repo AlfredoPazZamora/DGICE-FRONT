@@ -68,10 +68,10 @@ const FooterVideo = () => {
             {/* aqui termina la primera grid */}
 
             {/* empieza grid de imagenes 1 y 2*/}
-            <div className="py-6 md:mx-10 md:py-3 lg:w-full lg:mx-5 flex justify-center md:flex-justify-center lg:pt-8 xl:pt8">
-               <Link href="https://portal.ucol.mx/feuc/">
-                  <a>
-                     <Image
+            <div className="py-6 md:mx-10 md:py-3 lg:w-full lg:mx-5 flex justify-center md:flex-justify-center lg:py-0 lg:pt-8 xl:pt-8 ">
+               <Link href="https://www.ucol.mx/">
+                  <a className="lg:pt-4">
+                     <Image 
                         src={logo_negro}
                         width={300}
                         height={100}
@@ -164,7 +164,7 @@ const FooterVideo = () => {
 
 
          <div className="text-center ">
-            <h1 className="text-center bg-blue text-black p-6">
+            <h1 className="text-center bg-blue text-black lg:pb-3 pb-3 pt-3 ">
                © Derechos Reservados Universidad de Colima
             </h1>
          </div>
