@@ -9,7 +9,10 @@ export const Card = ({course: {id, title, author, creditHours, score, category, 
 
     const router = useRouter();
     const onClick = () => {
-        router.push(`/course/${id}`);
+        router.push({
+            pathname: '/course/[id]',
+            query: { id },
+        });
     }
 	return (
         <>
