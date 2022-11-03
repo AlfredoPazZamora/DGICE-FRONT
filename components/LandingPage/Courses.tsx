@@ -12,7 +12,7 @@ const Courses = () => {
         </div>
 
         <div className="flex md:items-center px-12 py-8 font-semibold">
-            <ListCards />
+            {/* <ListCards /> */}
         </div>
       </section>
     </>
