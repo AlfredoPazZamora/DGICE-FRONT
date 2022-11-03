@@ -1,10 +1,10 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
-export const NavBar = () => {
+ const NavBar = () => {
     return (
         <>
             <nav className='flex flex-nowrap justify-between items-center bg-white py-4 drop-shadow-md font-inter'>
@@ -13,9 +13,7 @@ export const NavBar = () => {
                         <Link href='https://portal.ucol.mx/dgice/'>
                             <a>
                                 <Image
-                                    src="/img/circle.png"
-                                    width={100}
-                                    height={100}
+                                    src="/img/circle.png" layout="responsive" width='100%' height='100%'
                                 />
                             </a>
                         </Link>
@@ -41,6 +39,8 @@ export const NavBar = () => {
         </>
     );
 }
+
+export default NavBar
 
 // const redirects = () => {
 //     window.location.replace("http://dgice-academy.ucol.mx:3000/login")

@@ -1,18 +1,12 @@
-
-import type { NextPage } from 'next'
-import { NavBar } from '../components/NavBar'
-
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// Example to add an icon in your component
-// import { faCheck } from '@fortawesome/free-solid-svg-icons'
-// import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import type { NextPage } from "next";
+import { MainLayout } from "../components/Layouts/MainLayout"
 
 const Home: NextPage = () => {
   return (
+      <MainLayout>
 
-    <NavBar></NavBar>
-  )
-}
+      </MainLayout>
+  );
+};
 
 export default Home;

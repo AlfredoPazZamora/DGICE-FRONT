@@ -1,5 +1,5 @@
 import Head from "next/head";
-import NavBar from "../NavBar";
+import NavBar from "../navBar";
 import FooterVideo from "../FooterVideo";
 
 export const MainLayout = ({ children }) => {
@@ -9,7 +9,7 @@ export const MainLayout = ({ children }) => {
                 <title>"DGICE Academy"</title>
             </Head>
 
-            {/* <NavBar /> */}
+            <NavBar />
 
             <main className="w-full flex justify-center">
                 { children }
