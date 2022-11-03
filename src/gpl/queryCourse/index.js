@@ -5,20 +5,18 @@ const GET_COURSES = gql`
 		getAllCourses {
 			id
 			title
-			image
 			hours
-			likes
-			author {
-				first_name
-				last_name
+			category {
+				name
 				id
 			}
-			creditHours
-			score
 			ratings
-			category {
+			score
+			creditHours
+			author {
 				id
-				name
+				first_name
+				last_name
 			}
 		}
 	}
