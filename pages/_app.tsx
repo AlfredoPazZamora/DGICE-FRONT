@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/styles.css'
 import type { AppProps } from 'next/app'
 import client from '../src/apollo/client';
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
@@ -7,9 +8,6 @@ import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-
-//Tailwind
-// import 'tailwindcss/defaultConfig'
 
 function MyApp({ Component, pageProps }: AppProps) {
 

@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 export default function Login(){
 
   async function onLoad() {
@@ -37,7 +35,12 @@ export default function Login(){
   return (
     <>
     <div className='flex justify-center items-center py-3'>
-      <p>HOLA</p>
+      <h1 id="titleWelcome">Profile</h1>
+      <h3 id="textName"></h3>
+      <h3 id="textCuenta"></h3>
+      <h3 id="textCorreo"></h3>
+      <button id="logout">Log out</button>
+      <button id="getUser">Get user</button>
       <button className='border border-blue_green bg-blue_green transition duration-700 ease-in-out transform hover:-translate-y-1 hover:scale-80 rounded-3xl px-8 md:px-12 py-2.5 shadow-md'type='button' onClick={logOut}>Cerrar sesión</button>
     </div>
     </>
