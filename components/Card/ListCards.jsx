@@ -1,68 +1,26 @@
-import { useState } from 'react';
-import { Card } from './Card'
+import { Card } from './Card';
 
-const values = [
-    {
-        id: 1,
-        title: "Curso de CSS",
-        image: "https://picsum.photos/200/300",
-        teacher: "Victor Robles",
-        rating: 4,
-        duration: "2 horas",
-    },
-    {
-        id: 2,
-        title: "Curso de HTML",
-        image: "https://picsum.photos/200/300",
-        teacher: "Victor Robles",
-        rating: 4,
-        duration: "3 horas",
-    },
-    {
-        id: 3,
-        title: "Curso de JS",
-        image: "https://picsum.photos/200/300",
-        teacher: "Victor Robles",
-        rating: 4,
-        duration: "4 horas",
-    },
-    {
-        id: 4,
-        title: "Curso de SASS",
-        image: "https://picsum.photos/200/300",
-        teacher: "Victor Robles",
-        rating: 4,
-        duration: "5 horas",
-    },
-    {
-        id: 5,
-        title: "Curso de React",
-        image: "https://picsum.photos/200/300",
-        teacher: "Victor Robles",
-        rating: 4,
-        duration: "6 horas",
-    }
-];
-export const ListCards = () => {
+/*
+    id
+    title
+    imagen
+    autor
+    horas de acreditación
+    modulos
+*/
 
-
-
-
-
+export const ListCards = ({courses}) => {
 	return (
         <>
             {/* List cards */}
-            <section className=' grid w-full gap-8 bg-white grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-items-center'>
+            <section className='gap-4 w-full bg-white grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4'>
 
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {
+                    courses.map((course) => (
+                        <Card key={course.id} course={course}/>
+                    ))
+                }
+                
             </section>
         </>
     );

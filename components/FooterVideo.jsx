@@ -13,7 +13,7 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const FooterVideo = () => {
    return (
-      <div className="flex flex-col absolute ">
+      <div className="flex flex-col relative bottom-0">
 
 
 

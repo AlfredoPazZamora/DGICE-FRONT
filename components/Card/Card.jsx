@@ -1,44 +1,52 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import Script from 'next/script'
+import { faArrowRight, faBuildingColumns } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-regular-svg-icons";
+import Image from 'next/image'
+import { StartRating } from "../Global";
+import { useRouter } from "next/router";
 
-export const Card = ({key}) => {
-    // console.log(key);
-    const value = 5;
+export const Card = ({course: {id, title, author, creditHours, score, category, hours, image}}) => {
+
+    const router = useRouter();
+    const onClick = () => {
+        router.push({
+            pathname: '/course/[id]',
+            query: { id },
+        });
+    }
 	return (
         <>
-            <article className="w-full lg:max-w-xs flex flex-col rounded-xl box-border shadow-xl">
-                {/* Top card */}
-                <section className="rounded-tr-xl rounded-tl-xl bg-[url('https://victorroblesweb.es/wp-content/uploads/2020/03/Aprender-CSS-en-15-minutos.png')] bg-cover ">
-
-                    {/* Text container */}
-                    <div className="p-5 backdrop-blur-xl bg-white-1/2 rounded-tr-xl rounded-tl-xl">
-                        <p className="mb-5 text-sm text-white/80 z-10 font-thin uppercase tracking-widest">Curso</p>
-                        <div className="flex place-items-center mb-5">
-                            <picture className="w-1/4">
-                                <img className="w-14 h-14 rounded-full" src="https://picsum.photos/200/300" alt="Imagen del curso" />
-                            </picture>
-                            <h3 className="ml-3 text-base w-3/4 text-black font-regular ">Nombre del curso</h3>
-                        </div>
-                        <div className="mb-5 flex place-items-center">
-                            <p className="mr-2 text-white/80 font-bold">4</p>
-                            <FontAwesomeIcon icon={ faStar } className="text-[#ffd60a]" />
-                            <FontAwesomeIcon icon={ faStar } className="text-[#ffd60a]" />
-                            <FontAwesomeIcon icon={ faStar } className="text-[#ffd60a]" />
-                            <FontAwesomeIcon icon={ faStar } className="text-[#ffd60a]" />
-                        </div>
-
-                        <p className="text-sm text-white/80 font-bold">2 horas</p>
+            <article className="w-full lg:max-w-sm flex flex-col rounded-xl box-border shadow-xl">
+                <div className="relative inline-block text-center rounded-t-xl">
+                    <Image 
+                        src='https://picsum.photos/200/300' 
+                        alt={`Imagen del curso ${title}`} 
+                        layout="responsive"
+                        width='100%'
+                        height={70}
+                        loading="lazy"
+                        className="rounded-t-xl contrast-50 "
+                    />
+                    
+                    <p className="absolute top-3 left-5 bg-blue px-4 rounded-lg text-white">{category.name}</p>
+                    <div className="absolute bottom-0 w-full flex justify-between px-5 py-1">
+                        <span className="text-white font-bold"><FontAwesomeIcon icon={faBuildingColumns} className="mr-1"/> {creditHours > 1 ? `${creditHours} horas` : `${creditHours} hora`}</span>
+                        <span className="text-yellow font-bold"><FontAwesomeIcon icon={faStar} className="mr-1"/> {score}</span>
                     </div>
-                </section>
+                </div>
 
-                {/* Bottom card */}
-                <section className=" rounded-br-xl rounded-bl-xl p-5 flex flex-col bg-white">
-                    <p className="font-bold text-small tracking-wide mb-4">Profesor</p>
-                    <a className="border w-full text-center py-3 rounded-md font-bold flex justify-center content-center">
-                        <span>Button</span>
-                        <span className="ml-2 self-center"> <FontAwesomeIcon icon={faArrowRight}/> </span> 
-                    </a>
+                <section className=" rounded-br-xl rounded-bl-xl p-5 flex flex-col bg-white h-full justify-between">
+                    <div>
+                        <h3 className="text-xl font-bold">{title}</h3>
+
+                    </div>
+
+                    <div>
+                        <p className="text-md mb-4">Por {`${author.first_name} ${author.last_name}`}</p>
+                        <a className="border border-blue text-blue w-full  py-3 rounded-md font-bold flex justify-center content-center hover:bg-blue hover:text-white cursor-pointer" onClick={onClick}>
+                            <span>Empezar ahora</span>
+                        </a>
+                    </div>
                 
                 </section>
 
