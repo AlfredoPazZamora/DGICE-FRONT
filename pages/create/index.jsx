@@ -1,14 +1,19 @@
-import { useQuery } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import React from "react";
 import { DashboardLayout } from '../../components/Layouts'
 import { GET_USER } from "../../src/gpl/queryUser";
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
+import { CREATE_COURSE } from "../../src/gpl/mutationCourse";
+import { useRouter } from "next/router";
+import { GET_CATEGORIES } from "../../src/gpl/queryCategory";
+
 
 const index = () => {
 
-    
-    
+    const router = useRouter();
+
+    const [createCourse] = useMutation(CREATE_COURSE);
 
     const formik = useFormik({
         initialValues: {
@@ -33,19 +38,42 @@ const index = () => {
             creditHours: Yup.number()
                 .required('Las horas de crédito del curso son obligatorias'),
         }),
-        onSubmit: values => {
-            console.log(values)
+        onSubmit: async values => {
+            console.log(values);
+            
+            const { title, description, image, hours, category, creditHours } = values;
+            const author = "63127f02f9f6fe8f2fa64776"
+
+            try {
+                await createCourse({
+                    variables: {
+                        course: {
+                            title,
+                            description,
+                            image,
+                            hours,
+                            category,
+                            author,
+                            creditHours
+                        }
+                    }
+                });
+                router.push('/admin');
+
+            } catch (error) {
+                console.log(error)
+            }
         }
     });
 
-    const {data, loading, error} = useQuery(GET_USER, {variables: {id: "6311a06ae3e14ea455875fca"}});
+    const { data, loading, error } = useQuery(GET_CATEGORIES);
     if(loading) return <p>Loading...</p>
     if(error) return <p>Error :(</p>
-    const { id, role } = data.getUser
 
+    const { getAllCategory } = data;
 
 	return (
-        <DashboardLayout title='Panel colaborador' user={data.getUser} type={role.name}>
+        <>
             <h1 className="text-4xl font-light ">Crear curso</h1>
 
             <div className="flex justify-center mt-5 w-full">
@@ -162,7 +190,22 @@ const index = () => {
                                 <label className="block text-lg font-bold mb-2 text-black" htmlFor="category">
                                     Area educativa
                                 </label>
-                                <input 
+
+                                <select
+                                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="category"
+                                    value={formik.values.category}
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                >
+                                    {
+                                        getAllCategory.map(category => (
+                                            <option key={category.id} value={category.id}>{category.name}</option>
+                                        ))
+                                    }
+                                </select>
+
+                                {/* <input 
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
                                     id="category" 
                                     type="text" 
@@ -170,7 +213,7 @@ const index = () => {
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
                                     value={formik.values.category}
-                                />    
+                                />     */}
                                 {
                                     formik.touched.category && formik.errors.category ? (
                                         <div className="my-2 bg-red/5 border-l-4 border-red text-red/70 p-4">
@@ -266,7 +309,7 @@ const index = () => {
                 </div>
             </div>
 
-        </DashboardLayout>
+        </>
     );
 };
 
