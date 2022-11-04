@@ -1,7 +1,5 @@
 import { useMutation, useQuery } from "@apollo/client";
 import React from "react";
-import { DashboardLayout } from '../../components/Layouts'
-import { GET_USER } from "../../src/gpl/queryUser";
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { CREATE_COURSE } from "../../src/gpl/mutationCourse";
