@@ -1,8 +1,7 @@
 
 import type { NextPage } from 'next'
 import NavBar from '../components/navBar'
-
-
+import ErrorPage from '../components/errorPage'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // Example to add an icon in your component
 // import { faCheck } from '@fortawesome/free-solid-svg-icons'
@@ -10,8 +9,10 @@ import NavBar from '../components/navBar'
 
 const Home: NextPage = () => {
   return (
-
-    <NavBar></NavBar>
+    <>
+      <NavBar></NavBar>
+      <ErrorPage></ErrorPage>
+    </>
   )
 }
 
