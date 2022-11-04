@@ -1,4 +1,6 @@
 import React from 'react'
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FooterVideo from '../FooterVideo'
 
 const Faq = () => {
@@ -7,141 +9,69 @@ const Faq = () => {
       <div className="container py-6 ">
 
         <div className="text-center py-5 ">
-          <p className="lg:text-5xl sm:text-4xl text-3xl my-5 font-sans-serif mx-4">
+          <p className="lg:text-3xl sm:text-2xl text-xl my-5 font-sans-serif mx-4">
             Preguntas frecuentes
           </p>
-          <hr className='mx-6' />
+          <hr className=' w-3/4 md:2/3 container' />
         </div>
 
+        {/*  */}
+        <div className="shadow-md w-3/4 md:2/3 mx-auto mt-4 mb-2">
 
-        <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-2   mx-4 my-4 py-2">
-          {/* aqui empieza la card de las preguntas  */}
 
-          <div className="bg-white rounded-lg mx-2 my-2   ">
+          <div className="overflow-hidden  rounded cursor-pointer  hover:bg-gray mb-2">
 
-            <div className=" rounded-lg my-5 mx-2 ring-2 ring-blue   ">
+            <label>
 
-              <div className=" bg-blue text-center font-sans-serif  rounded-t-lg py-2">
+              <p className=" p-5 inline-block  w-11/12 text-center cursor-pointer">¿Quíenes pueden unirse a los cursos?</p>
+              <input className=" absolute  opacity-0  h-4 w-4 float-right mt-6 mr-2   shadow-md peer " type="checkbox" />
 
-                <p className=" text-sm font-bold">
-                  ¿Cómo me registro a la plataforma DGICE?
-                </p>
-              </div>
+              <div className="bg-blue max-h-0 peer-checked:max-h-screen delay-150 ease-in duration-150"><p className="p-5  text-start">Lorem ipsum dolor sit amet consectetur adipiscing elit, faucibus platea id netus aliquam vel quis, pharetra montes nullam luctus erat habitant. Magna fames convallis senectus neque semper hac massa est elementum, tincidunt scelerisque diam fusce venenatis sollicitudin quam cubilia, pulvinar nisi nulla lectus ultrices potenti per platea. Metus vivamus parturient quam natoque vehicula turpis suspendisse dictum dignissim mattis tempor scelerisque litora mollis sociis, et potenti leo auctor cum hac nunc nisl habitant ut nulla iaculis lectus.</p></div>
+            </label>
 
-              <div className="py-5">
-                <ul className="mx-4 text-startfont-inter text-justify">
-                  <p >
-                    Para poder registrarte debes ser miembro de la universidad de colima.
-                  </p>
-                  <p>Debes ingresar con tu numero de cuenta y contraseña.</p>
-                </ul>
-              </div>
+          </div>
 
-            </div>
+          <div className="overflow-hidden  rounded cursor-pointer  hover:bg-gray mb-2">
+
+            <label>
+
+              <p className=" p-5 inline-block  w-11/12 text-center cursor-pointer">¿Quíenes pueden unirse a los cursos?</p>
+              <input className=" absolute  opacity-0  h-4 w-4 float-right mt-6 mr-2   shadow-md peer " type="checkbox" />
+
+              <div className="bg-blue max-h-0 peer-checked:max-h-screen delay-150 ease-in duration-150"><p className="p-5  text-start">Lorem ipsum dolor sit amet consectetur adipiscing elit, faucibus platea id netus aliquam vel quis, pharetra montes nullam luctus erat habitant. Magna fames convallis senectus neque semper hac massa est elementum, tincidunt scelerisque diam fusce venenatis sollicitudin quam cubilia, pulvinar nisi nulla lectus ultrices potenti per platea. Metus vivamus parturient quam natoque vehicula turpis suspendisse dictum dignissim mattis tempor scelerisque litora mollis sociis, et potenti leo auctor cum hac nunc nisl habitant ut nulla iaculis lectus.</p></div>
+            </label>
+
+          </div>
+
+          <div className="overflow-hidden  rounded cursor-pointer  hover:bg-gray mb-2">
+
+            <label>
+
+              <p className=" p-5 inline-block  w-11/12 text-center cursor-pointer">¿Quíenes pueden unirse a los cursos?</p>
+              <input className=" absolute  opacity-0  h-4 w-4 float-right mt-6 mr-2   shadow-md peer " type="checkbox" />
+
+              <div className="bg-blue max-h-0 peer-checked:max-h-screen delay-150 ease-in duration-150"><p className="p-5  text-start">Lorem ipsum dolor sit amet consectetur adipiscing elit, faucibus platea id netus aliquam vel quis, pharetra montes nullam luctus erat habitant. Magna fames convallis senectus neque semper hac massa est elementum, tincidunt scelerisque diam fusce venenatis sollicitudin quam cubilia, pulvinar nisi nulla lectus ultrices potenti per platea. Metus vivamus parturient quam natoque vehicula turpis suspendisse dictum dignissim mattis tempor scelerisque litora mollis sociis, et potenti leo auctor cum hac nunc nisl habitant ut nulla iaculis lectus.</p></div>
+            </label>
 
           </div>
 
 
-          {/* aqui termina */}
-          {/* aqui empieza la card de las preguntas  */}
 
-          <div className="bg-white rounded-lg mx-2 my-2   ">
-
-            <div className=" rounded-lg my-5 mx-2 ring-2 ring-blue   ">
-
-              <div className=" bg-blue text-center font-sans-serif  rounded-t-lg py-2">
-
-                <p className=" text-sm font-bold">
-                  ¿Cómo me registro a la plataforma DGICE?
-                </p>
-              </div>
-
-              <div className="py-5">
-                <ul className="mx-4 text-startfont-inter text-justify">
-                  <p >
-                    Para poder registrarte debes ser miembro de la universidad de colima.
-                  </p>
-                  <p>Debes ingresar con tu numero de cuenta y contraseña.</p>
-                </ul>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          {/* aqui termina */}
-          {/* aqui empieza la card de las preguntas  */}
-
-          <div className="bg-white rounded-lg mx-2 my-2   ">
-
-            <div className=" rounded-lg my-5 mx-2 ring-2 ring-blue   ">
-
-              <div className=" bg-blue text-center font-sans-serif  rounded-t-lg py-2">
-
-                <p className=" text-sm font-bold">
-                  ¿Cómo me registro a la plataforma DGICE?
-                </p>
-              </div>
-
-              <div className="py-5">
-                <ul className="mx-4 text-startfont-inter text-justify">
-                  <p >
-                    Para poder registrarte debes ser miembro de la universidad de colima.
-                  </p>
-                  <p>Debes ingresar con tu numero de cuenta y contraseña.</p>
-                </ul>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          {/* aqui termina */}
-          {/* aqui empieza la card de las preguntas  */}
-
-          <div className="bg-white rounded-lg mx-2 my-2   ">
-
-            <div className=" rounded-lg my-5 mx-2 ring-2 ring-blue   ">
-
-              <div className=" bg-blue text-center font-sans-serif  rounded-t-lg py-2">
-
-                <p className=" text-sm font-bold">
-                  ¿Cómo me registro a la plataforma DGICE?
-                </p>
-              </div>
-
-              <div className="py-5">
-                <ul className="mx-4 text-startfont-inter text-justify">
-                  <p >
-                    Para poder registrarte debes ser miembro de la universidad de colima.
-                  </p>
-                  <p>Debes ingresar con tu numero de cuenta y contraseña.</p>
-                </ul>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          {/* aqui termina */}
 
         </div>
-
-
+        {/*  */}
 
 
 
         <div className="text-center py-5 ">
-          <hr className='mx-6' />
+
+          <hr className=' w-3/4 md:2/3 container' />
         </div>
 
-
-
       </div>
-      {/* <FooterVideo /> */}
+
+
+
     </>
 
   )

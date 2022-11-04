@@ -5,7 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    container:{
+    container: {
       center: true,
     },
     screens: {
@@ -19,7 +19,8 @@ module.exports = {
       'blue': "#31D0C1",
       'green': "#8DE137",
       'black': "#000000",
-      'white': "#FEFEFE"
+      'white': "#FEFEFE",
+      'gray': "#64748b",
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],
