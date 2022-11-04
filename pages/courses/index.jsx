@@ -1,13 +1,14 @@
 import { useQuery } from "@apollo/client";
 import { ListCards } from "../../components/Card";
 import { MainLayout } from "../../components/Layouts/MainLayout";
-import { GET_COURSES } from "../../src/gpl/queryCourse";
+import { GET_COURSES, GET_CATEGORIES } from "../../src/gpl/queryCourse";
 
 const allCourses = () => {
-
-    const { loading, error, data } = useQuery(GET_COURSES);
+    const { data, loading, error } = useQuery(GET_COURSES);
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error :c </p>;
+    if (error) console.log(error);
+
+    console.log(data);
 
 	return (
         <>
@@ -24,9 +25,6 @@ const allCourses = () => {
                 </div>
 
             </MainLayout>
-
-            
-
         </>
     );
 };

@@ -5,7 +5,28 @@ const GET_COURSES = gql`
 		getAllCourses {
 			id
 			title
-			image
+			hours
+			category {
+				name
+				id
+			}
+			ratings
+			score
+			creditHours
+			author {
+				id
+				first_name
+				last_name
+			}
+		}
+	}
+`;
+
+const GET_COURSE = gql`
+	query ($id: ID!) {
+		getCourse(id: $id) {
+			id
+			title
 			hours
 			likes
 			author {
@@ -24,4 +45,4 @@ const GET_COURSES = gql`
 	}
 `;
 
-export { GET_COURSES };
+export { GET_COURSES, GET_COURSE };
