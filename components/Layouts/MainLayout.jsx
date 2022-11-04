@@ -6,13 +6,12 @@ export const MainLayout = ({ children }) => {
 	return (
         <>
             <Head>
-                <title>DGICE Academy</title>
-
+                <title>"DGICE Academy"</title>
             </Head>
 
-            <NavBar />
+            {/* <NavBar /> */}
 
-            <main className="bg-black w-full flex justify-center">
+            <main className="w-full flex justify-center">
                 { children }
             </main>
 
