@@ -6,7 +6,7 @@ import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons'
 
 const ErrorPage = () => {
   return (
-    <div className="w-screen h-screen flex flex-col justify-center items-center space-y-3">
+    <div className="min-w-screen pt-10 flex flex-col justify-center items-center space-y-3">
       <div className="flex flex-row items-center space-x-4">
         <FontAwesomeIcon className="pt-2"size="2xl" icon={faTriangleExclamation} />
         <p className="text-6xl text-blue font-bold">404</p>
