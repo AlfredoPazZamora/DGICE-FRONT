@@ -1,6 +1,7 @@
 import Head from "next/head";
-import NavBar from "../navBar";
-import FooterVideo from "../FooterVideo";
+import NavBar from "../NavBar/navBar";
+import FooterVideo from "../FooterComponent";
+import { LandingPage } from "../LandingPage/LandingPage";
 
 export const MainLayout = ({ children }) => {
 	return (
@@ -15,7 +16,7 @@ export const MainLayout = ({ children }) => {
                 { children }
             </main>
 
-            <FooterVideo />
+            {/* <FooterVideo /> */}
 
         </>
     );
