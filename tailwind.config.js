@@ -8,15 +8,15 @@ module.exports = {
     screens: {
       'sm': '375px',
       'md': '500px',
-      'lg': '1024px',
-      'xl': '1200px'
+      'lg': '1024px'
     },
-
     colors: {
+      'white': "#ffffff",
       'blue_green': "#22928e",
       'blue_light': "#31D0C1",
       'blue': "#315cd0",
       'yellow': "#ffd803",
+      'yellow_light':"#dcbd12",
       'green': "#249222",
       'white': '#fff',
       'black': '#000',

@@ -1,14 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import feuc from '../src/img/feuc.jpg'
-import consorcio from '../src/img/consorcio.jpg'
-import LogoSep from '../src/img/LogoSep.jpg'
-import LogoFec from '../src/img/LogoFEC.jpg'
+// import feuc from '../src/img/feuc.jpg'
+// import consorcio from '../src/img/consorcio.jpg'
+// import LogoSep from '../src/img/LogoSep.jpg'
+// import LogoFec from '../src/img/LogoFEC.jpg'A
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faPhone, faGraduationCap, faBook, faMapLocation, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-
-
 
 
 const FooterVideo = () => {
@@ -78,14 +76,14 @@ const FooterVideo = () => {
 
                <div className=" w-full  flex flex-col " >
                   <a href="https://portal.ucol.mx/feuc/">
-                     <Image className="w-full align-center" src={feuc} />
+                     {/* <Image className="w-full align-center" src={feuc} /> */}
                   </a>
                </div>
 
                <div className="h-full w-full  flex flex-col" >
 
                   <a href="https://www.cumex.org.mx/">
-                     <Image className="w-full   align-center" src={consorcio} />
+                     {/* <Image className="w-full   align-center" src={consorcio} /> */}
                   </a>
                </div>
             </div>
@@ -98,14 +96,14 @@ const FooterVideo = () => {
                <div className="h-full w-full content-center flex flex-col" >
 
                   <a href="https://www.gob.mx/sep">
-                     <Image className="w-full align-center" src={LogoSep} />
+                     {/* <Image className="w-full align-center" src={LogoSep} /> */}
                   </a>
                </div>
 
                <div className="h-full w-full  flex flex-col" >
 
                   <a href="http://federaciondeestudiantescolimenses.com/">
-                     <Image className='w-full align-center' src={LogoFec} />
+                     {/* <Image className='w-full align-center' src={LogoFec} /> */}
                   </a>
                </div>
 
