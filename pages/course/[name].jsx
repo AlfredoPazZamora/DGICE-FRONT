@@ -1,38 +1,46 @@
 import { useQuery } from "@apollo/client";
+import { useRouter } from "next/router";
 import React from "react";
+import { GET_COURSE_BY_NAME } from "../../src/gpl/queryCourse";
+
+import { faBuildingColumns, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import {faClock} from "@fortawesome/free-regular-svg-icons";
 import { MainLayout } from "../../components/Layouts/MainLayout";
 
 import { StartRating } from "../../components/Global";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faBuildingColumns, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import {faClock} from "@fortawesome/free-regular-svg-icons";
-import { useRouter } from "next/router";
-import { GET_COURSE } from "../../src/gpl/queryCourse";
+const courseByName = () => {
 
-const pageCourse = () => {
+    const router = useRouter();
+    const { query: { name } } = router;
 
-	// const {id, name_course, author, credits, rating, area, duration, description, img} = course
-	const router = useRouter();
-	const { query: { id } } = router;
-	console.log(id);
 
-	const { loading, error, data } = useQuery(GET_COURSE, {
-		variables: { id: id }
-	});
 
-	if (loading) return <p>Loading...</p>;
-	if (error) return <p>Error :(</p>;
+    
+    
+    const { data, loading, error } = useQuery(GET_COURSE_BY_NAME, {
+        variables: {
+            name: name?.replace(/-/g, " ")
+        }
+    });
 
-	const { getCourse: course  } = data;
-	const { title, author, category, creditHours, hours } = course;
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
 
-	console.log(course);
+    const { getCourseByName } = data;
+
+    // console.log(getCourseByName[0]);
+    const {id, title, description, image, hours, category, creditHours, score, author} = getCourseByName[0];
+
+    // Convert url drive to another url
+    const urlId = image.match(/d\/([A-Za-z0-9\-\_]+)/);
+	const url = urlId[1] ? `https://drive.google.com/uc?export=view&id=${urlId[1]}` : 'https://picsum.photos/200/300';
 
 
 	return (
-		<MainLayout>
+        <MainLayout>
 			<div className="w-full flex justify-center items-center flex-col">
 
 				<div className="w-full bg-blue_light/30 flex justify-center items-center">
@@ -41,7 +49,7 @@ const pageCourse = () => {
 
 						<aside className="lg:col-start-3 lg:row-start-1 my-10 flex flex-col justify-center ">
 							<Image 
-								src="https://picsum.photos/200/300"
+								src={url}
 								alt="Picture of the author"
 								layout="responsive"
 								width='100%'
@@ -60,7 +68,7 @@ const pageCourse = () => {
 						<section className="grid-cols-1 lg:col-start-1 lg:row-start-1 mx-10 lg:mx-0 lg:col-span-2 flex flex-col justify-center my-10">
 							<h1 className="text-4xl font-bold mb-2">{title}</h1>
 							<p className="text-small mb-5">Creado por {`${author.first_name} ${author.last_name}`}</p>
-							<p className="text-small text-justify lg:text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget felis purus. Cras ac malesuada dui. Etiam nunc lectus, fermentum mattis ante et, tempus malesuada ligula. Nulla tincidunt lorem nec magna malesuada pharetra. In lectus erat, congue non metus vitae, maximus tempus turpis. Nunc semper lobortis hendrerit. Cras dictum mi eget aliquam elementum. Suspendisse faucibus vel dolor efficitur fringilla. Donec non mi non augue viverra volutpat. Aenean vel elementum nisl. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.	</p>
+							<p className="text-small text-justify lg:text-left">{description}</p>
 
 							<div className="my-5  flex gap-5 items-center ">
 								<span className="bg-blue text-white font-bold py-2 px-4 rounded-full text-sm tracking-wide">{category.name}</span>
@@ -196,9 +204,7 @@ const pageCourse = () => {
 			</div> 
 
 		</MainLayout>
-	);
+    );
 };
 
-
-
-export default pageCourse;
+export default courseByName;
