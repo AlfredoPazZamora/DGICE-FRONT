@@ -6,9 +6,7 @@ import { GET_COURSES, GET_CATEGORIES } from "../../src/gpl/queryCourse";
 const allCourses = () => {
     const { data, loading, error } = useQuery(GET_COURSES);
     if (loading) return <p>Loading...</p>;
-    if (error) console.log(error);
-
-    console.log(data);
+    if (error) return <p>Error :(</p>;
 
 	return (
         <>

@@ -27,22 +27,45 @@ const GET_COURSE = gql`
 		getCourse(id: $id) {
 			id
 			title
+			description
+			image
 			hours
-			likes
-			author {
-				first_name
-				last_name
-				id
-			}
-			creditHours
-			score
-			ratings
 			category {
 				id
 				name
+			}
+			score
+			creditHours
+			author {
+				id
+				first_name
+				last_name
 			}
 		}
 	}
 `;
 
-export { GET_COURSES, GET_COURSE };
+const GET_COURSE_BY_NAME = gql`
+	query ($name: String) {
+		getCourseByName(name: $name) {
+			id
+			title
+			description
+			image
+			hours
+			category {
+				id
+				name
+			}
+			creditHours
+			score
+			author {
+				id
+				first_name
+				last_name
+			}
+		}
+	}
+`;
+
+export { GET_COURSES, GET_COURSE, GET_COURSE_BY_NAME };
