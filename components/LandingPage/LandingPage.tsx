@@ -7,9 +7,11 @@ import { About } from './About';
 export const LandingPage = () => {
   return (
         <>
-            <Start />
-            <Courses />
-            <About />
+            <div className=''>
+                <Start />
+                <Courses />
+                <About />
+            </div>
         </>
     )
 }

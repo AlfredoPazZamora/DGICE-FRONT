@@ -5,7 +5,7 @@ export const Start = () => {
   return (
     <>
         <section className="h-full flex flex-col justify-center items-center px-9 lg:flex-row mt-9">
-            <article className="w-full py-4 px-8 text-center lg:mx-4 lg:text-start">
+            <article className="w-full py-4 px-8 text-center lg:text-start">
                 <div>
                 <p className="text-h3 md:text-h3 py-4 font-medium">
                     La calidad de estudio la encuentras aqui
