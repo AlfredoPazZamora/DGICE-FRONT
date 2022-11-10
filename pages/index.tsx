@@ -1,19 +1,22 @@
 
-import type { NextPage } from "next";
-import { LandingPage } from "../components/LandingPage/LandingPage";
-import { MainLayout } from "../components/Layouts/MainLayout"
-import NavBar from "../components/NavBar/navBar";
+
+import type { NextPage } from 'next'
+import { LandingPage } from '../components/LandingPage/LandingPage';
+import { MainLayout } from '../components/Layouts/MainLayout'
+
 
 
 const Home: NextPage = () => {
   return (
     <>
-      <NavBar></NavBar>
+      <MainLayout>
 
-      <LandingPage></LandingPage>
+      </MainLayout>
+      <LandingPage /> 
+
     </>
-  );
-};
+  )
+}
 
 
 export default Home;

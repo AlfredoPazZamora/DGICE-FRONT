@@ -3,14 +3,15 @@ import NavBar from "../NavBar/navBar";
 import FooterVideo from "../FooterComponent";
 import { LandingPage } from "../LandingPage/LandingPage";
 
-export const MainLayout = ({ children }) => {
+export const MainLayout = ({ children, nameUser }) => {
+
 	return (
         <>
             <Head>
                 <title>"DGICE Academy"</title>
             </Head>
 
-            <NavBar />
+            <NavBar nameUser={nameUser} />
 
             <main className="w-full flex justify-center">
                 { children }
