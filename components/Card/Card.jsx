@@ -7,11 +7,13 @@ import { useRouter } from "next/router";
 
 export const Card = ({course: {id, title, author, creditHours, score, category, hours, image}}) => {
 
+    const titleWithOutSpaces = title.replace(/\s/g, '-');
+
     const router = useRouter();
     const onClick = () => {
         router.push({
-            pathname: '/course/[id]',
-            query: { id },
+            pathname: '/course/[name]',
+            query: { name: titleWithOutSpaces },
         });
     }
 	return (

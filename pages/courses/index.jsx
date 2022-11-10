@@ -9,6 +9,7 @@ const allCourses = () => {
     const [globalUser, setGlobalUser] = useState()
     const { data, loading, error } = useQuery(GET_COURSES);
     if (loading) return <p>Loading...</p>;
+
     if (error) console.log(error);  
 
     async function onLoad() {
@@ -41,6 +42,7 @@ const allCourses = () => {
     }
     
     onLoad();
+
     if (error) return <p>Error :(</p>;
 
 	return (
