@@ -41,6 +41,7 @@ const allCourses = () => {
     }
     
     onLoad();
+    if (error) return <p>Error :(</p>;
 
 	return (
         <>

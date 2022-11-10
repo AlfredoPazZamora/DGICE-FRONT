@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-import { ListCards } from "../Card/ListCards";
-import { Card } from '../Card/Card';
+import React from 'react'
 
 const Courses = () => {
 
@@ -12,7 +10,7 @@ const Courses = () => {
         </div>
 
         <div className="flex md:items-center px-12 py-8 font-semibold">
-            {/* <ListCards /> */}
+            {/*Cursos*/}
         </div>
       </section>
     </>

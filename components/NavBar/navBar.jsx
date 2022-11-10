@@ -47,8 +47,3 @@ const NavBar = ({ nameUser }) => {
 };
 
 export default NavBar;
-
-// const redirects = () => {
-//     window.location.replace("http://dgice-academy.ucol.mx:3000/login")
-//     return;
-// }
