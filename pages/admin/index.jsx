@@ -1,26 +1,46 @@
 import { useQuery } from '@apollo/client'
-import { GET_USER } from '../../src/gpl/queryUser'
+import { GET_USER_ACCOUNT, GET_USER } from '../../src/gpl/queryUser'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { CreateCourse } from '../../components/Dashboard'
 import { DashboardLayout } from '../../components/Layouts'
 
 
+
 const index = () => {
 
-    const {data, loading, error} = useQuery(GET_USER, {
-        variables: {id: "6311a06ae3e14ea455875fca"}
-    })
+    let userAccount;
 
-    if(loading) return <p>Loading...</p>
-    if(error) return <p>Error :(</p>
+    if (typeof window !== 'undefined') {
+        if (localStorage.getItem('uCuenta') === null) {
+            window.location.href = '/'
+        } else {
+            userAccount = localStorage.getItem('uCuenta').toString();
+        }
+    }
 
-    const { id, role } = data.getUser
+    const {data, loading, error} = useQuery(GET_USER_ACCOUNT, {
+        variables: {
+            noAccount: "20164920"
+        }
+    }); 
+
+    if (error) return <p>Error :(</p>
+    if (loading) return <p>Loading...</p>
+
+
+
+    console.log(data.getUserAccount);
+    
+    
+
+    
 
     return (
-        <DashboardLayout title='Panel colaborador' user={data.getUser} type={role.name}>
-            <CreateCourse />
-        </DashboardLayout>
+        // <DashboardLayout title='Panel colaborador' user={data.getUserAccount} type={role.name}>
+        //     <CreateCourse />
+        // </DashboardLayout>
+        <h1>Hola</h1>
     )
 }
 
