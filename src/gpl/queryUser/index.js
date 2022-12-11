@@ -34,8 +34,12 @@ const GET_USER_ACCOUNT = gql`
 	query ($noAccount: String) {
 		getUserAccount(No_account: $noAccount) {
 			No_account
-    		first_name
-    		last_name
+			first_name
+			last_name
+			role {
+				id
+				name
+			}
 		}
 	}
 `;

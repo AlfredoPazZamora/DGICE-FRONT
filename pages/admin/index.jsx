@@ -4,16 +4,17 @@ import { GET_USER_ACCOUNT, GET_USER } from '../../src/gpl/queryUser'
 import React, { useEffect, useState } from 'react'
 import { CreateCourse } from '../../components/Dashboard'
 import { DashboardLayout } from '../../components/Layouts'
+import { useRouter } from 'next/router'
 
 
 
 const index = () => {
-
+    const router = useRouter();
     let userAccount;
 
     if (typeof window !== 'undefined') {
         if (localStorage.getItem('uCuenta') === null) {
-            window.location.href = '/'
+            router.push('/')
         } else {
             userAccount = localStorage.getItem('uCuenta').toString();
         }
@@ -30,18 +31,19 @@ const index = () => {
 
 
 
-    console.log(data.getUserAccount);
+    const { role } = data.getUserAccount;
     
-    
+    console.log(role.name)
 
-    
-
-    return (
-        // <DashboardLayout title='Panel colaborador' user={data.getUserAccount} type={role.name}>
-        //     <CreateCourse />
-        // </DashboardLayout>
-        <h1>Hola</h1>
-    )
+    if(role.name === 'ADMIN'){
+        return (
+            <DashboardLayout title='Panel administrador' user={data.getUserAccount} type={role.name}>
+                <CreateCourse />
+            </DashboardLayout>
+        )
+    } else {
+        router.push('/')
+    }
 }
 
 export default index
