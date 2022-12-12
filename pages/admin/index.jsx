@@ -22,7 +22,7 @@ const index = () => {
 
     const {data, loading, error} = useQuery(GET_USER_ACCOUNT, {
         variables: {
-            noAccount: "20164920"
+            noAccount: userAccount
         }
     }); 
 
