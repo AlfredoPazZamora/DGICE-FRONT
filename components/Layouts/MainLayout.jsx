@@ -3,7 +3,7 @@ import NavBar from "../NavBar/navBar";
 import FooterVideo from "../FooterComponent";
 import { LandingPage } from "../LandingPage/LandingPage";
 
-export const MainLayout = ({ children, nameUser }) => {
+export const MainLayout = ({ children }) => {
 
 	return (
         <>
@@ -11,7 +11,7 @@ export const MainLayout = ({ children, nameUser }) => {
                 <title>"DGICE Academy"</title>
             </Head>
 
-            <NavBar nameUser={nameUser} />
+            <NavBar />
 
             <main className="w-full flex justify-center">
                 { children }
