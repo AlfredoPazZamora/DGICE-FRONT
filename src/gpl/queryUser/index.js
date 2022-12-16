@@ -30,4 +30,18 @@ const GET_USER = gql`
 	}
 `;
 
-export { GET_USERS, GET_USER };
+const GET_USER_ACCOUNT = gql`
+	query ($noAccount: String) {
+		getUserAccount(No_account: $noAccount) {
+			No_account
+			first_name
+			last_name
+			role {
+				id
+				name
+			}
+		}
+	}
+`;
+
+export { GET_USERS, GET_USER, GET_USER_ACCOUNT };

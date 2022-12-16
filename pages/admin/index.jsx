@@ -1,27 +1,53 @@
 import { useQuery } from '@apollo/client'
-import { GET_USER } from '../../src/gpl/queryUser'
+import { GET_USER_ACCOUNT, GET_USER } from '../../src/gpl/queryUser'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { CreateCourse } from '../../components/Dashboard'
 import { DashboardLayout } from '../../components/Layouts'
+import { useRouter } from 'next/router'
+
 
 
 const index = () => {
+    const router = useRouter();
+    let userAccount;
 
-    const {data, loading, error} = useQuery(GET_USER, {
-        variables: {id: "6311a06ae3e14ea455875fca"}
-    })
+    if (typeof window !== 'undefined') {
+        if (localStorage.getItem('uCuenta') === null) {
+            router.push('/')
+        } else {
+            userAccount = localStorage.getItem('uCuenta').toString();
+        }
+    }
 
-    if(loading) return <p>Loading...</p>
-    if(error) return <p>Error :(</p>
+    const {data, loading, error} = useQuery(GET_USER_ACCOUNT, {
+        variables: {
+            noAccount: userAccount
+        }
+    }); 
 
-    const { id, role } = data.getUser
+    if (error) return <p>Error :(</p>
+    if (loading) return <p>Loading...</p>
 
-    return (
-        <DashboardLayout title='Panel colaborador' user={data.getUser} type={role.name}>
-            <CreateCourse />
-        </DashboardLayout>
-    )
+
+    if (data.getUserAccount === null) {
+        router.push('/')
+    }
+
+
+    const { role } = data.getUserAccount;
+    
+    console.log(role.name)
+
+    if(role.name === 'ADMIN'){
+        return (
+            <DashboardLayout title='Panel administrador' user={data.getUserAccount} type={role.name}>
+                <CreateCourse />
+            </DashboardLayout>
+        )
+    } else {
+        router.push('/')
+    }
 }
 
 export default index

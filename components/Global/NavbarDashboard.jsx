@@ -4,6 +4,7 @@ import { faBell,  fafo } from '@fortawesome/free-regular-svg-icons'
 import { faHouse, faBriefcase, faMessage, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const navItems = [
     {
@@ -24,6 +25,31 @@ const navItems = [
 ]
 
 export const NavbarDashboard = ({username, image}) => {
+
+    const route = useRouter()
+
+    const logOut = async () => {
+        if(typeof window !== 'undefined'){
+
+            const name_id = localStorage.getItem('name_id');
+            const session_index = localStorage.getItem('session_index');
+            const url = `http://dgice-academy.ucol.mx:3000/logout/${name_id}/${session_index}`;
+
+            
+                fetch(url, {
+                    method: "GET",
+                    mode: "cors",
+                    
+                });
+
+
+            localStorage.clear();
+            route.push('/')
+            
+            
+        } 
+    }
+
     return (
         <nav className='bg-blue_green w-1/5 max-w-[200px] shadow-xl min-h-screen flex flex-col justify-between'>
 
@@ -57,9 +83,11 @@ export const NavbarDashboard = ({username, image}) => {
                 </section>
             </div>
 
-            <a href='/' className='bg-red flex justify-center items-center py-3 '>
+            <a className='bg-red flex justify-center items-center py-3 hover:cursor-pointer' onClick={logOut}>
                 <FontAwesomeIcon icon={faRightFromBracket} className='text-2xl text-white' />
             </a>
         </nav>
     )
 }
+
+

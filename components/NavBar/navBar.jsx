@@ -4,7 +4,7 @@ import ButtonNav from "./buttonNav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const NavBar = ({ nameUser }) => {
+const NavBar = () => {
 
   return (
     <>
@@ -38,7 +38,7 @@ const NavBar = ({ nameUser }) => {
             />
           </div>
           <div className="text-xs lg:text-sm mx-4">
-            <ButtonNav text={nameUser ? nameUser : "Iniciar sesión"}></ButtonNav>
+            <ButtonNav></ButtonNav>
           </div>
         </div>
       </nav>
