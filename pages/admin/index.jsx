@@ -30,6 +30,10 @@ const index = () => {
     if (loading) return <p>Loading...</p>
 
 
+    if (data.getUserAccount === null) {
+        router.push('/')
+    }
+
 
     const { role } = data.getUserAccount;
     
