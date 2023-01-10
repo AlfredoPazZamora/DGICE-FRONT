@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { CreateCourse } from '../../components/Dashboard'
 import { DashboardLayout } from '../../components/Layouts'
 import { useRouter } from 'next/router'
+import { MainFrame } from '../../components/admin'
 
 
 
@@ -42,7 +43,11 @@ const index = () => {
     if(role.name === 'ADMIN'){
         return (
             <DashboardLayout title='Panel administrador' user={data.getUserAccount} type={role.name}>
+                
                 <CreateCourse />
+
+                <MainFrame/>
+
             </DashboardLayout>
         )
     } else {
