@@ -51,7 +51,7 @@ export const NavbarDashboard = ({username, image}) => {
     }
 
     return (
-        <nav className='bg-blue_green w-1/5 max-w-[200px] shadow-xl min-h-screen flex flex-col justify-between'>
+        <nav className='bg-blue_green col-start-1 col-end-3 shadow-xl min-h-screen flex flex-col justify-between fixed'>
 
 
             <div className='text-white'>
