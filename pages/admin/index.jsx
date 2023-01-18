@@ -38,7 +38,7 @@ const index = () => {
 
     const { role } = data.getUserAccount;
     
-    console.log(role.name)
+
 
     if(role.name === 'ADMIN'){
         return (
@@ -46,7 +46,7 @@ const index = () => {
                 
                 <CreateCourse />
 
-                <MainFrame/>
+                <MainFrame idUser={data.getUserAccount.id}/>
 
             </DashboardLayout>
         )
